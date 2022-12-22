@@ -1,0 +1,8 @@
+div {
+    width:200px; 
+    height:200px; 
+    border:2px solid black; 
+    background-color: rgb(146, 255, 233);
+    filter: blur(10px);
+}
+
