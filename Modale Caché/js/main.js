@@ -1,22 +1,15 @@
-const bouton = document.getElementById('show-case');
-const texte = document.getElementById('case');
+const bouton = document.querySelector('.button');
+const box = document.querySelector('.box');
+const body = document.querySelector('body');
 
-bouton.addEventListener('click', function() {
-  texte.style.display = "block";
-  document.body.style.backgroundColor = "grey";
-})
-
-// on stop la propagation
 bouton.addEventListener('click', function(event) {
-  event.stopPropagation();
+  // on stop la propagation : méthode utilisée pour empêcher l'événement de se propager au niveau supérieur de la hiérarchie d'éléments
+  event.stopPropagation(); 
+  box.style.display = "block";
+  body.style.backgroundColor = "grey";
 })
 
-document.addEventListener('click', function(e) {
-
-  if (!texte.contains(e.target)) {
-    // Déclencher l'événement ici
-    texte.style.display = "none";
-    document.body.style.backgroundColor = "white";
-  }
-  
+document.addEventListener('click', function() {
+  body.style.backgroundColor = "white";
+  box.style.display = "none";
 });

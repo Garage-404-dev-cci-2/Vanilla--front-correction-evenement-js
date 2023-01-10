@@ -1,6 +1,7 @@
-#case {
+.box {
     display: none; /* ON cache l'overlay par default */
+    border: 1px solid black;
     height: 200px;
     width: 200px;
-    background-color: rgb(255, 255, 255); /* set the background color to a translucent gray */
+    background-color: white;
 }
